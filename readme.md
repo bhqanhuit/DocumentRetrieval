@@ -3,25 +3,24 @@
 This project implements a document retrieval system that processes PDF files, converts them to images, generates embeddings using the `ColQwen2` model, and provides a search API with a web interface. The system allows users to search for relevant PDF pages based on text queries, with results displayed in a user-friendly HTML table.
 
 ## Project Structure
-project/
-├── app/
-│ ├── static/
-│ │ └── index.html # Web interface for search
-│ ├── _init_.py
-│ ├── main.py # FastAPI application
-│ ├── models.py # Pydantic models for API
-│ └── services.py # Document retrieval logic
-├── examples/
-│ ├── colpali_inference.py # Example inference script for ColPali model
-│ └── inference.py # General inference example script
-├── utils/
-│ ├── create_embedding.py # Script to generate embeddings
-│ └── preprocess_pdf_documents.py # Script to convert PDFs to images
-├── assets/
-│ ├── pdf
-│ ├── preprocessed_documents
-│ └── doc_embeddings
-└── requirements.txt # Project dependencies
+project/\
+├── app/\
+│ ├── static/\
+│ │ └── index.html # Web interface for search\
+│ ├── main.py # FastAPI application\
+│ ├── models.py # Pydantic models for API\
+│ └── services.py # Document retrieval logic\
+├── examples/\
+│ ├── colpali_inference.py # Example inference script for ColPali model\
+│ └── inference.py # General inference example script\
+├── utils/\
+│ ├── create_embedding.py # Script to generate embeddings\
+│ └── preprocess_pdf_documents.py # Script to convert PDFs to images\
+├── assets/\
+│ ├── pdf/\
+│ ├── preprocessed_documents/\
+│ └── doc_embeddings/\
+└── requirements.txt # Project dependencies\
 
 ## Features
 

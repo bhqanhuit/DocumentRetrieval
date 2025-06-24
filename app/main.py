@@ -12,12 +12,8 @@ app = FastAPI(title="PDF Search API")
 app.mount("/static", StaticFiles(directory="app/static"), name="static")
 
 # Dependency to get DocumentRetriever instance
-def get_retriever():
-    retriever = DocumentRetriever(embeddings_dir="data/doc_embedding")
-    try:
-        yield retriever
-    finally:
-        retriever.cleanup()
+retriever = DocumentRetriever(embeddings_dir="data/doc_embedding")
+
 
 @app.get("/", response_class=HTMLResponse)
 async def get_index():
@@ -28,7 +24,7 @@ async def get_index():
         return HTMLResponse(content=f.read())
 
 @app.post("/search", response_model=List[SearchResponse])
-async def search_documents(query: SearchQuery, retriever: DocumentRetriever = Depends(get_retriever)):
+async def search_documents(query: SearchQuery):
     """
     Search embedded PDF documents with a query string.
     Returns top 5 matching pages with file paths and page numbers.
