@@ -12,6 +12,8 @@ import logging
 # Configure logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 logger = logging.getLogger(__name__)
+project_root = Path(__file__).parent.parent
+
 
 def create_embeddings(
     input_dir: str = "data/test_repo/pdf",
