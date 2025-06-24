@@ -1,1 +1,13 @@
 /data
+/save
+
+# Python bytecode
+__pycache__/
+*.pyc
+
+# Other common ignores (optional)
+*.pyo
+*.pyd
+.Python
+venv/
+*.env
