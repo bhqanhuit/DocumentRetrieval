@@ -30,7 +30,7 @@ async def search_documents(query: SearchQuery):
     Returns top 5 matching pages with file paths and page numbers.
     """
     try:
-        results = retriever.search(query.query, top_k=5)
+        results = retriever.search(query.query, top_k=100)
         return [
             SearchResponse(file_path=result["file_path"], page_number=result["page_number"])
             for result in results

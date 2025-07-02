@@ -8,7 +8,7 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(
 logger = logging.getLogger(__name__)
 
 def preprocess_pdfs(
-    input_dir: str = "data/test_repo/pdf",
+    input_dir: str = "data/pdf",
     save_dir: str = "data/preprocessed_documents"
 ) -> None:
     """
